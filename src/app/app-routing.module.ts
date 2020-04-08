@@ -8,8 +8,8 @@ import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   
-  { path: "registration", component: RegistrationComponent },
-  { path: "primary-page", component: PrimaryPageComponent}
+  { path: "", component: RegistrationComponent },
+  { path: "", component: PrimaryPageComponent}
   
 ];
 
