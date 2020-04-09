@@ -8,7 +8,7 @@ import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   
-  { path: "", component: RegistrationComponent },
+  { path: "registration", component: RegistrationComponent },
   { path: "", component: PrimaryPageComponent}
   
 ];
