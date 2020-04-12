@@ -1,10 +1,10 @@
 <div class="card m-3">
-    <h5 class="card-header">Registration Form</h5>
+    <h5 class="card-header" >Registration Form</h5>
     <div class="card-body">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-row">
                 <div class="form-group col">
-                    <label>Dancers grade in Fall</label>
+                    <h6><label>Dancers grade in Fall</label></h6>
                     <select formControlName="grade" class="form-control" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.title.errors }">
                         <option value=""></option>
                         <option value="Prek">PreK</option>
@@ -27,22 +27,22 @@
                     </div>
                 </div>
                 <div class="form-group col-5">
-                    <label>Dancers First Name</label>
+                    <h6><label>Dancers First Name</label></h6>
                     <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.firstName.errors }" />
                     <div *ngIf="submitted && this.registerForm.controls.firstName.errors" class="invalid-feedback">
                         <div *ngIf="this.registerForm.controls.firstName.errors.required">First Name is required</div>
                     </div>
                 </div>
                 <div class="form-group col-5">
-                    <label>Dancers Last Name</label>
+                    <h6><label>Dancers Last Name</label></h6>
                     <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.lastName.errors }" />
                     <div *ngIf="submitted && this.registerForm.controls.lastName.errors" class="invalid-feedback">
                         <div *ngIf="this.registerForm.controls.lastName.errors.required">Last Name is required</div>
                     </div>
                 </div>
-            </div> 
-                    <label>Technique? (Additional ballet for 4th thru 12th grades)</label>
-                    <select formControlName="technique" class="form-control" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.technique.errors }">
+            </div> <br>
+                    <h6><label>Technique? (Additional ballet for 4th thru 12th grades)</label></h6>
+                    <div class="w-25 p-2" ><select formControlName="technique" class="form-control"  [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.technique.errors }">
                         <option value=""></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -50,17 +50,18 @@
                     <div *ngIf="submitted && this.registerForm.controls.technique.errors" class="invalid-feedback">
                         <div *ngIf="this.registerForm.controls.technique.errors.required">This field is required</div>
                     </div>
+                    </div> <br>
             <div class="form-group">
-                <label>Email</label>
+                <h6><label>Email</label></h6>
                 <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.email.errors }" />
                 <div *ngIf="submitted && this.registerForm.controls.email.errors" class="invalid-feedback">
                     <div *ngIf="this.registerForm.controls.email.errors.required">Email is required</div>
                     <div *ngIf="this.registerForm.controls.email.errors.email">Email must be a valid email address</div>
                 </div>
-            </div>
+            </div><br>
             <div class="form-row">
                 <div class="form-group col">
-                    <label>Parent/Guardian First Name</label>
+                    <h6><label>Parent/Guardian First Name</label></h6>
                     <input type="text" formControlName="parentsFirstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.parentFirstName.errors }" />
                     <div *ngIf="submitted && this.registerForm.controls.parentFirstName.errors" class="invalid-feedback">
                         <div *ngIf="this.registerForm.controls.parentFirstName.errors.required">Name is required</div>
@@ -68,21 +69,21 @@
                     </div>
                 </div>
                 <div class="form-group col">
-                    <label>Parent/Guardian Last Name</label>
+                    <h6><label>Parent/Guardian Last Name</label></h6>
                     <input type="text" formControlName="parentsLastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.parentsLasttName.errors }" />
                     <div *ngIf="submitted && this.registerForm.controls.parentsLasttName.errors" class="invalid-feedback">
                         <div *ngIf="this.registerForm.controls.parentsLasttName.errors.required">Name is required</div>
                     </div>
                 </div>
-            </div>
+            </div><br>
             <div class="form-group form-check">
-                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.acceptTerms.errors }" />
-                <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                <div class="w-75 p-3" style="background-color: #eee;"><input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.acceptTerms.errors }" />
+                <label for="acceptTerms" class="form-check-label">__ Accept Terms & Conditions: I hereby release the Brentwood School District from any responsibilities for any injuries sustained during dance class.	</label></div>
                 <div *ngIf="submitted && this.registerForm.controls.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
             </div>
             <div class="text-center">
                 <button class="btn btn-primary mr-1">Register</button>
-                <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Reset</button>
             </div>
         </form>
     </div>

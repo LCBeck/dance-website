@@ -6,13 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./primary-page.component.scss']
 })
 export class PrimaryPageComponent implements OnInit {
-  title = 'registration-form';
+  title = '';
+  
+  
+  
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
-
-
 

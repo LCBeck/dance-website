@@ -36,7 +36,7 @@ export class RegistrationComponent implements OnInit {
     }
 
     // display form values on success
-    alert('Registration Complete\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    alert('Registration Complete' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
   onReset() {

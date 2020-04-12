@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { PrimaryPageComponent } from './primary-page/primary-page.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { InformationComponent } from './information/information.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     RegistrationComponent,
     PrimaryPageComponent,
     ConfirmationComponent,
+    InformationComponent,
   ],
   imports: [
     BrowserModule,
