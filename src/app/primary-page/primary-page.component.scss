@@ -10,12 +10,19 @@
 
 h1 {
     $open-sans: 'Open Sans', sans-serif ;
-    font-weight: normal;
+    font-weight: normal
+    ;
+    
 
 }
-.body { 
-    font: 100% sans-serif;
-    text-align: center;
-    background-color: lightblue;
+$bg:  linear-gradient(135deg, #80c2e7 0%, #dafa8f 100%);
+    
+body {
+    background: $bg; 
+    color: text($bg);
+    text-align: Center;
   }
-
+  .center {
+    display: flex;
+    justify-content: center;
+  }

@@ -1,0 +1,16 @@
+$bg:  linear-gradient(135deg,  #f5c0ec 0%, #d9faa5 100%);
+    
+body {
+    background: $bg; 
+    color: text($bg);
+    text-align: Center;
+  }
+  .btn-xlarge {
+    padding: 14px 24px;
+    font-size: 24px; 
+    font-weight: bold;
+    line-height: normal;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
