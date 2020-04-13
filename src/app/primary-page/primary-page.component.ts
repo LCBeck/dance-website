@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./primary-page.component.scss']
 })
 export class PrimaryPageComponent implements OnInit {
-  title = '';
+  title = 'registration';
   
   
   

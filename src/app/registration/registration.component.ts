@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { Component, OnInit, PipeTransform } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -9,8 +10,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
   title = 'registration';
+  name = "A Name or FormControl";
+
   registerForm: FormGroup;
-    submitted = false;
+  submitted = false;
 
   constructor(private formBuilder: FormBuilder ) { }
 
@@ -26,22 +29,19 @@ export class RegistrationComponent implements OnInit {
       acceptTerms: [false, Validators.requiredTrue]
     });
   }
+  
 
   onSubmit() {
     this.submitted = true;
-
-    // stop here if form is invalid
     if (this.registerForm.invalid) {
-          return;
+          return ('must complete all areas of the form');
     }
 
-    // display form values on success
     alert('Registration Complete' + JSON.stringify(this.registerForm.value, null, 4));
+    // this.router.navigateByUrl('confirmation');  The 'router' is not recognized.
   }
-
-  onReset() {
-    this.submitted = false;
-    this.registerForm.reset();
+  
 }
 
-}
+  
+
