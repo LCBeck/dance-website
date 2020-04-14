@@ -3,7 +3,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InformationComponent } from './information/information.component';
 import { PrimaryPageComponent } from './primary-page/primary-page.component';
 import { NgModule, Component, } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 
 
