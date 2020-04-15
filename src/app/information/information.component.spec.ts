@@ -22,4 +22,13 @@ describe('InformationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  // This is the test I added below.
+
+  it('should render title in a h5 tag', async(() => {
+    const fixture = TestBed.createComponent(InformationComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h5').textContent).toContain('Information Page');
+  }));
 });

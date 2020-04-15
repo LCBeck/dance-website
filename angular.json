@@ -92,9 +92,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/scss/bootstrap"
-            ],
+             
+                "src/styles.scss"
+              ],
+            
             "scripts": []
           }
         },

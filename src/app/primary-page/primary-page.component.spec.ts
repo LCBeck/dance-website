@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { PrimaryPageComponent } from './primary-page.component';
 import { Button } from 'protractor';
 
+import { get } from "http";
+
+
 describe('PrimaryPageComponent', () => {
   let component: PrimaryPageComponent;
   let fixture: ComponentFixture<PrimaryPageComponent>;
@@ -24,11 +27,13 @@ describe('PrimaryPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
+
 // This is my custom test I added below.
-  it('should have linear-gradient <body>', () => {
-    const body: HTMLElement = fixture.nativeElement.querySelector('body');
-    const bgColor = body.style.backgroundColor;
-    expect(bgColor).toBe('linear-gradient');
-  });
+it('should render title in a h1 tag', async(() => {
+  const fixture = TestBed.createComponent(InformationComponent);
+  fixture.detectChanges();
+  const compiled = fixture.debugElement.nativeElement;
+  expect(compiled.querySelector('h1').textContent).toContain('Classes');
+}));
+
 });

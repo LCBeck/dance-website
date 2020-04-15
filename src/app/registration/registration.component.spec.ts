@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RegistrationComponent } from './registration.component';
-const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
 
 
 describe('RegistrationComponent', () => {
@@ -9,34 +9,33 @@ describe('RegistrationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegistrationComponent ]
+      declarations: [ RegistrationComponent ],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        
+        
+      ],
     })
+    
     .compileComponents();
-  }));
+}));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(RegistrationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  
+ 
+  
+  // My custom test below for this component.
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-  
-  it('should return true if the form control is valid', () => {
+  it('should create a FormGroup comprised of FormControls', () => {
     component.ngOnInit();
-    component.registerForm.controls['grade'].setValue('Prek');
-    component.registerForm.controls['firstName'].setValue('Ava');
-    component.registerForm.controls['lastName'].setValue('Hero');
-    component.registerForm.controls['technique'].setValue('yes');
-    component.registerForm.controls['email'].setValue('@gmail.com');
-    component.registerForm.controls['parentsFirstName'].setValue('Mom');
-    component.registerForm.controls['parentsLastName'].setValue('Hero');
-    component.registerForm.controls['acceptTerms'].setValue(true);
-    expect(component.registerForm.valid).toBe(true);
-  
-    component.onSubmit();
-    expect(component.submitted).toBe(true);
-  });
+    expect(Object.keys(component.registerForm.controls).length).toEqual(8);
+    expect(Object.keys(component.registerForm.controls)).toEqual([
+      'grade', 'firstName', 'lastName', 'technique', 'email', 'parentsFirstName', 'parentsLastName', 'acceptTerms'
+    ]);
+});
 });
