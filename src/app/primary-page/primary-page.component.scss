@@ -21,8 +21,13 @@ body {
     background: $bg; 
     color: text($bg);
     text-align: Center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 55px;
+    margin-right: 55px;
   }
   .center {
     display: flex;
     justify-content: center;
   }
+  
