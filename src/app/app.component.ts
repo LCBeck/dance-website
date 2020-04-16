@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dance-website';
-  
+  // this is for my pipe
 }
